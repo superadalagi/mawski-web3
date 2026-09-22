@@ -1,4 +1,4 @@
-const CLIENT_ID = 'Ov23liLyZzC51xuQ4JIt';
+const CLIENT_ID = 'Ov23liB6riFMfMl9hDNJ';
 
 const callbackPage = (token) => {
   const safe = JSON.stringify(token).replace(/</g, '\\u003c');

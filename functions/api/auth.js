@@ -1,4 +1,4 @@
-const CLIENT_ID = 'Ov23liLyZzC51xuQ4JIt';
+const CLIENT_ID = 'Ov23liB6riFMfMl9hDNJ';
 
 export async function onRequestGet({ request }) {
   const url = new URL(request.url);
