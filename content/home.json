@@ -1,0 +1,10 @@
+{
+  "contact_heading": "Help the right people find their way into Web3.",
+  "contact_copy": "Building a Web3 product for Southeast Asia? Tell me where the route currently gets stuck, and we can find the useful next move.",
+  "contacts": [
+    {"label": "WhatsApp ↗", "url": "https://wa.me/+6281298660099", "visible": true},
+    {"label": "Telegram ↗", "url": "https://t.me/mawskism", "visible": true},
+    {"label": "LinkedIn ↗", "url": "https://www.linkedin.com/in/gelar-bhakti/", "visible": true},
+    {"label": "X ↗", "url": "https://x.com/Mawskism", "visible": true}
+  ]
+}

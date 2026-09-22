@@ -1,0 +1,41 @@
+backend:
+  name: github
+  repo: superadalagi/mawski-web3
+  branch: main
+  squash_merges: true
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+site_url: "https://web3.mawski.my.id"
+display_url: "https://web3.mawski.my.id"
+logo_url: "https://web3.mawski.my.id/favicon.svg"
+collections:
+  - name: site
+    label: Site content
+    files:
+      - name: homepage
+        label: Homepage
+        file: content/home.json
+        format: json
+        fields:
+          - { label: "Contact heading", name: contact_heading, widget: string }
+          - { label: "Contact copy", name: contact_copy, widget: text }
+          - label: Contact links
+            name: contacts
+            widget: list
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: URL, name: url, widget: string }
+              - { label: Visible, name: visible, widget: boolean, default: true }
+  - name: case_studies
+    label: Case studies
+    folder: content/case-studies
+    create: true
+    slug: "{{slug}}"
+    format: json
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Role, name: role, widget: string }
+      - { label: Summary, name: summary, widget: text }
+      - { label: Scope, name: scope, widget: string }
+      - { label: Approved image, name: image, widget: image, required: false }
+      - { label: Published, name: published, widget: boolean, default: false }
