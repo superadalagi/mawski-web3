@@ -1,6 +1,0 @@
-{
-  "name": "mawski-web3-sanity-studio",
-  "private": true,
-  "scripts": {"build": "sanity build"},
-  "dependencies": {"@sanity/vision": "latest", "sanity": "latest", "styled-components": "^6.5.3"}
-}
