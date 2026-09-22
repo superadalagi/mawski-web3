@@ -2,6 +2,7 @@ backend:
   name: github
   repo: superadalagi/mawski-web3
   branch: main
+  auth_endpoint: /api/auth
   squash_merges: true
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
