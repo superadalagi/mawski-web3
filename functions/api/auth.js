@@ -5,7 +5,7 @@ export async function onRequestGet({ request }) {
   const provider = url.searchParams.get('provider');
   if (provider !== 'github') return new Response('Invalid provider', { status: 400 });
 
-  const callback = `${url.origin}/api/auth/callback?provider=github`;
+  const callback = `${url.origin}/api/auth/callback`;
   const github = new URL('https://github.com/login/oauth/authorize');
   github.searchParams.set('client_id', CLIENT_ID);
   github.searchParams.set('redirect_uri', callback);

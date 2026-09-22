@@ -14,12 +14,13 @@ window.opener.postMessage('authorizing:github', '*');
 
 export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);
-  if (url.searchParams.get('provider') !== 'github') return new Response('Invalid provider', { status: 400 });
+  const provider = url.searchParams.get('provider');
+  if (provider && provider !== 'github') return new Response('Invalid provider', { status: 400 });
   const code = url.searchParams.get('code');
   if (!code) return new Response('Missing GitHub authorization code.', { status: 400 });
   if (!env.GITHUB_CLIENT_SECRET) return new Response('OAuth secret is not configured.', { status: 500 });
 
-  const redirectUri = `${url.origin}/api/auth/callback?provider=github`;
+  const redirectUri = `${url.origin}/api/auth/callback`;
   const tokenResponse = await fetch('https://github.com/login/oauth/access_token', {
     method: 'POST',
     headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
