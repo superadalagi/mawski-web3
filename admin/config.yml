@@ -3,6 +3,7 @@ backend:
   repo: superadalagi/mawski-web3
   branch: main
   auth_endpoint: /api/auth
+  base_url: https://web3.mawski.my.id
   squash_merges: true
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
